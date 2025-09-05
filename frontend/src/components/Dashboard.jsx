@@ -93,7 +93,7 @@ const Dashboard = () => {
             onClick={() => setShowModal(true)}
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-medium shadow-lg transform hover:scale-105"
           >
-            + Add New Project
+            + Add New Device
           </button>
         </div>
 
@@ -120,7 +120,7 @@ const Dashboard = () => {
                 onClick={() => handleProjectClick(project.uniqueCode)}
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 px-4 rounded-lg hover:from-blue-600 hover:to-purple-700 transition font-medium"
               >
-                Visit Project
+                Visit Device
               </button>
             </div>
           ))}
@@ -128,7 +128,7 @@ const Dashboard = () => {
 
         {projects.length === 0 && (
           <div className="text-center py-12">
-            <div className="text-gray-500 text-lg">No projects yet. Create your first project!</div>
+            <div className="text-gray-500 text-lg">No Device yet. Create your first Device!</div>
           </div>
         )}
       </main>
@@ -138,7 +138,7 @@ const Dashboard = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-xl shadow-2xl p-8 max-w-md w-full mx-4">
             <div className="flex justify-between items-center mb-6">
-              <h2 className="text-2xl font-bold text-gray-900">Add New Project</h2>
+              <h2 className="text-2xl font-bold text-gray-900">Add New Device</h2>
               <button
                 onClick={() => setShowModal(false)}
                 className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
@@ -156,7 +156,7 @@ const Dashboard = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Project Name
+                  Device Name
                 </label>
                 <input
                   type="text"
@@ -165,7 +165,7 @@ const Dashboard = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
-                  placeholder="Enter project name"
+                  placeholder="Enter Device name"
                 />
               </div>
 
@@ -197,7 +197,7 @@ const Dashboard = () => {
                   disabled={loading}
                   className="flex-1 bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {loading ? 'Adding...' : 'Add Project'}
+                  {loading ? 'Adding...' : 'Add Device'}
                 </button>
               </div>
             </form>
