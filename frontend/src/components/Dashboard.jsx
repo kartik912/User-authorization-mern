@@ -63,7 +63,8 @@ const Dashboard = () => {
   };
 
   const handleProjectClick = (uniqueCode) => {
-    window.open(`https://hydroagrixai.in/${uniqueCode}`, '_blank');
+    {/* window.open(`https://hydroagrixai.in/${uniqueCode}`, '_blank'); */}
+    window.open(`https://hydroagrixai.in`, '_blank');
   };
 
   return (
